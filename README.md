@@ -1,3 +1,3 @@
 # crudAlura
 
-Criação crua quando faço curso na alura
+Criação crud em conjunto de curso da Alura.
