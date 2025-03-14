@@ -1,2 +1,3 @@
-# crudAlura
-Crud criando enquando faço curso na alura
+crudAlura
+
+Criação crua quando faço curso na alura
