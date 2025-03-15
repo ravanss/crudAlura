@@ -15,20 +15,22 @@
         $sql1 = "SELECT * FROM funcionarios";
         $statement = $pdo->query($sql1);
         $funcionarios = $statement->fetchAll(mode: PDO::FETCH_ASSOC);
+        // Incluindo o header
+        include "src/header.php";
     ?>
-    
     <div class="container">
         <div class="col-12 col-sm-12">
             <div class="row">
-                <h1>Lista de funcionarios</h1>
                 <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Categoria</th>
-                        <th>Editar</th>
-                        <th>Excluir</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Categoria</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>                            
+                        </tr>
+                    </thead>
                     <tr <?php foreach ($funcionarios as $funcionario): ?>>
                         <td><?= $funcionario['nome']; ?></td>
                         <td><?= $funcionario['email']; ?></td>
@@ -38,22 +40,11 @@
                     </tr <?php endforeach; ?>>
                 </table>
             </div>
-            <div class="row">
-                <form id="form-create" class="form-create">
-                    <h2>Novo funcionario</h2>
-                    <div class="form-group">
-                        <input type="hidden" id="id" name="id">
-                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome">
-                        <input type="text" id="email" name="email" class="form-control" placeholder="E-mail">
-                        <input type="text" id="categoria" name="categoria" class="form-control" placeholder="Categoria">
-                        <button class="btn btn-primary" type="submit">Salvar novo funcionario</button>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
-    <script src="assets/main.js"></script>
+    <?php
+        // Incluindo o footer
+        include "src/footer.php";
+    ?>
 </body>
 </html>

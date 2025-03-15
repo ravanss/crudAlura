@@ -17,6 +17,17 @@ header {
     overflow: hidden;
 }
 
+.header-title{
+    background-color: #003333;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 10px 10%;
+}
+.header-title .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -30,6 +41,8 @@ li {
 }
 
 h1, h2, h3 {
+    display: inline-block;
+    width: auto !important;
     margin: 0;
     padding: 0;
 }
@@ -106,10 +119,10 @@ td:last-of-type span{
 }
 
 .btn.btn-primary {
-    background-color: #333;
+    background-color: blue;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin-top: 20px;
+    width: auto;
 }
