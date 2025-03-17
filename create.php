@@ -12,14 +12,12 @@
 
     <?php
         require "src/conexao_db.php";
+        $title = "Adicionar Funcionario";
+        $btn_title = "Voltar para home"; 
+        $link_arquivo = "index.php"; 
+        // Incluindo o header
+        include "src/header.php";
     ?>
-    <div class="container-fluid header-title">
-        <div class="col-12 col-sm-12">
-                <div class="row">
-                    <a href="index.php" class="btn btn-primary">Voltar para Home</a>
-                </div>
-        </div>
-    </div>
     <div class="container">
         <div class="col-12 col-sm-12">
             <div class="row">

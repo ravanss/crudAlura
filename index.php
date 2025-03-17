@@ -15,6 +15,9 @@
         $sql1 = "SELECT * FROM funcionarios";
         $statement = $pdo->query($sql1);
         $funcionarios = $statement->fetchAll(mode: PDO::FETCH_ASSOC);
+        $title = "Lista de Funcionarios";
+        $btn_title = "Adicionar Funcionario";
+        $link_arquivo = "create.php"; 
         // Incluindo o header
         include "src/header.php";
     ?>
