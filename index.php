@@ -27,6 +27,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
                             <th>Categoria</th>
@@ -35,14 +36,24 @@
                         </tr>
                     </thead>
                     <tr <?php foreach ($funcionarios as $funcionario): ?>>
-                        <td><?= $funcionario['nome']; ?></td>
+                        <td id="<?= $funcionario['id']; ?>"><?= $funcionario['id']; ?></td>
+                        <td id="<?= $funcionario['nome']; ?>"><?= $funcionario['nome']; ?></td>
                         <td><?= $funcionario['email']; ?></td>
                         <td><?= $funcionario['categoria']; ?></td>
                         <td><a href="#"><span><i class="fa-solid fa-pencil"></i></span></a></td>
-                        <td><a href="#"><span><i class="fa-solid fa-xmark"></i></span></a></td>
+                        <td><a href="#" onclick="exibirId(<?= $funcionario['id']; ?>), openModal(<?= $funcionario['nome']; ?>)"><span id="funcionarioId"><i class="fa-solid fa-trash"></i></span></a></td>
                     </tr <?php endforeach; ?>>
                 </table>
             </div>
+        </div>
+    </div>
+    <!---- Modal ---->
+    <div class="Modalzao" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Excluir Funcionario</h2>
+            <p>Tem certeza que deseja excluir o funcionario <span id="mensagem"></span>?</p>
+            <a id="funcionarioExcluir" href="#" class="btn btn-danger" onclick="excluirFuncionario()">Excluir</a>
         </div>
     </div>
     <?php

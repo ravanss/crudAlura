@@ -126,3 +126,32 @@ td:last-of-type span{
     cursor: pointer;
     width: auto;
 }
+
+#mensagem{
+    font-size: 18px;
+    line-height: 22px;
+    color: red;
+}
+
+.Modalzao {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    overflow: auto;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+.Modalzao .close{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    cursor: pointer;
+    z-index: 2;
+}

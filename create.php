@@ -9,7 +9,6 @@
     <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-
     <?php
         require "src/conexao_db.php";
         $title = "Adicionar Funcionario";
