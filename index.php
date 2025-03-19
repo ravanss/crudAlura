@@ -40,7 +40,7 @@
                         <td id="<?= $funcionario['nome']; ?>"><?= $funcionario['nome']; ?></td>
                         <td><?= $funcionario['email']; ?></td>
                         <td><?= $funcionario['categoria']; ?></td>
-                        <td><a href="#"><span><i class="fa-solid fa-pencil"></i></span></a></td>
+                        <td><a href="src/update.php?id=<?= $funcionario['id'];?>"><span><i class="fa-solid fa-pencil"></i></span></a></td>
                         <td><a href="#" onclick="exibirId(<?= $funcionario['id']; ?>), openModal(<?= $funcionario['nome']; ?>)"><span id="funcionarioId"><i class="fa-solid fa-trash"></i></span></a></td>
                     </tr <?php endforeach; ?>>
                 </table>

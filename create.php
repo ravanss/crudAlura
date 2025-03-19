@@ -21,7 +21,7 @@
         <div class="col-12 col-sm-12">
             <div class="row">
                 <form id="form-create" class="form-create" method="POST" action="src/create_process.php">
-                    <h2>Adiconar um novo funcionario</h2>
+                    <h2>Adicionar um novo funcionario</h2>
                     <div class="form-group">
                         <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome">
                         <input type="text" id="email" name="email" class="form-control" placeholder="E-mail">
