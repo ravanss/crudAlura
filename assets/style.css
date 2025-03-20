@@ -91,7 +91,7 @@ td:last-of-type span{
     color: red;
 }
 
-#form-create{
+#form-create, #form-update{
     margin-top: 50px;
     border: 2px solid #333;
     border-radius: 10px;

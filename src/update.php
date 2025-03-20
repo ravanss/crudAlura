@@ -6,14 +6,14 @@
     <title>Lista</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <link href="assets/style.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet">
 </head>
 <body>
     <?php
         require "conexao_db.php";
         $title = "Editar Funcionario";
         $btn_title = "Voltar para home"; 
-        $link_arquivo = "index.php"; 
+        $link_arquivo = "../index.php"; 
         // Incluindo o header
         include "header.php";
         $id = $_GET['id'];
@@ -26,14 +26,14 @@
     <div class="container">
         <div class="col-12 col-sm-12">
             <div class="row">
-                <form id="form-update" class="form-update" method="POST">
+                <form id="form-update" class="form-update" method="POST" action="update_process.php">
                     <h2>Alterar um novo funcionario</h2>
                     <div class="form-group">
                         <input type="hidden" name="id" value="<?php echo $funcionario['id']; ?>">
                         <input type="text" id="nome" name="nome" class="form-control" value="<?php echo $funcionario['nome']; ?>" required>
                         <input type="text" id="email" name="email" class="form-control" value="<?php echo $funcionario['email']; ?>" require>
                         <input type="text" id="categoria" name="categoria" class="form-control" value="<?php echo $funcionario['categoria']; ?>" require>
-                        <button class="btn btn-primary" type="submit">Salvar novo funcionario</button>
+                        <button class="btn btn-primary" type="submit">Atualizar funcionario</button>
                     </div>
                 </form>
             </div>
