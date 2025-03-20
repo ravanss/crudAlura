@@ -15,7 +15,7 @@
         $btn_title = "Voltar para home"; 
         $link_arquivo = "../index.php"; 
         // Incluindo o header
-        include "header.php";
+        include "../header.php";
         $id = $_GET['id'];
         $sql = "SELECT * FROM funcionarios WHERE id = :id";
         $stmt = $pdo->prepare($sql);
@@ -41,7 +41,7 @@
     </div>
     <?php
         // Incluindo o footer
-        include "footer.php";
+        include "../footer.php";
     ?>
 </body>
 </html>

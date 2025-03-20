@@ -15,7 +15,7 @@
         $btn_title = "Voltar para home"; 
         $link_arquivo = "index.php"; 
         // Incluindo o header
-        include "src/header.php";
+        include "header.php";
     ?>
     <div class="container">
         <div class="col-12 col-sm-12">
@@ -34,7 +34,7 @@
     </div>
     <?php
         // Incluindo o footer
-        include "src/footer.php";
+        include "footer.php";
     ?>
 </body>
 </html>
